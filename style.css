@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    color: #007bff;
+}
+
+.hadith-box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.hadith-box:hover {
+    transform: scale(1.02);
+}
+
+.dark-mode .hadith-box {
+    background: #292929;
+    color: white;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>হাদিস সংগ্রহ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1 class="text-center">📖 হাদিস সংগ্রহ</h1>
+
+        <!-- Dark Mode -->
+        <button class="btn btn-dark float-end" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+        <!-- হাদিস সংগ্রহ নির্বাচন -->
+        <div class="mb-3">
+            <label for="hadithBook" class="form-label">📚 হাদিস সংগ্রহ:</label>
+            <select id="hadithBook" class="form-select">
+                <option value="bukhari">বুখারী</option>
+                <option value="muslim">মুসলিম</option>
+                <option value="tirmidi">তিরমিজি</option>
+                <option value="ibnMajah">ইবনে মাজাহ</option>
+                <option value="abuDaud">আবু দাউদ</option>
+                <option value="riyadusSalihin">রিয়াদুস সালেহিন</option>
+            </select>
+        </div>
+
+        <!-- সার্চ ইনপুট -->
+        <div class="mb-3">
+            <label for="hadithNumber" class="form-label">🔍 হাদিস খুঁজুন:</label>
+            <input type="text" id="hadithNumber" class="form-control" placeholder="হাদিস নম্বর বা কিওয়ার্ড লিখুন...">
+        </div>
+
+        <!-- লোডিং -->
+        <div id="loading" class="text-center text-primary" style="display: none;">
+            <div class="spinner-border" role="status"></div>
+            <p>লোড হচ্ছে...</p>
+        </div>
+
+        <!-- হাদিস দেখানোর স্থান -->
+        <div id="hadith-container" class="mt-3"></div>
+
+        <!-- নেভিগেশন -->
+        <div class="d-flex justify-content-between mt-3">
+            <button class="btn btn-outline-primary" onclick="prevPage()">⬅️ আগের</button>
+            <button class="btn btn-outline-primary" onclick="nextPage()">➡️ পরের</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
